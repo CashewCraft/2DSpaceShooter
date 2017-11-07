@@ -31,7 +31,7 @@ public class PickupHandlerFirerate : MonoBehaviour {
 	{
 		if (hit.name == "Player")
 		{
-			transform.parent = hit.transform.parent;
+			transform.parent = hit.transform;
 			Destroy(transform.GetComponent<SpriteRenderer>()); //Woo, I'm a ghost
 			Destroy(transform.GetChild(0).gameObject);
 			Active = true;
@@ -51,11 +51,14 @@ public class PickupHandlerFirerate : MonoBehaviour {
 	{
 		//Powerup stuff
 		transform.parent.GetComponent<Shooting>().fireDelay /= 2;
+		transform.parent.GetComponent<Shooting>().Damage /= 2;
+		//Adjust damage because firerate is ment to be ability to saturate screen with bullets, not DPS
 	}
 
 	void OnPowerUpDead()
 	{
 		//Reverse of above
 		transform.parent.GetComponent<Shooting>().fireDelay *= 2;
+		transform.parent.GetComponent<Shooting>().Damage *= 2;
 	}
 }

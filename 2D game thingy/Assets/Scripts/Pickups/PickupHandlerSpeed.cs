@@ -31,7 +31,8 @@ public class PickupHandlerSpeed : MonoBehaviour {
 	{
 		if (hit.name == "Player")
 		{
-			transform.parent = hit.transform.parent;
+			transform.parent = hit.transform;
+			print(transform.parent.name);
 			Destroy(transform.GetComponent<SpriteRenderer>()); //Woo, I'm a ghost
 			Destroy(transform.GetChild(0).gameObject);
 			Active = true;

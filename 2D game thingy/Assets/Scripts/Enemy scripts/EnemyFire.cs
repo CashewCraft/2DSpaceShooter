@@ -20,8 +20,8 @@ public class EnemyFire : MonoBehaviour {
 	{
 		if (delayCounter <= 0)
 		{
-			GameObject bullet = Instantiate(projectile, transform.position, transform.localRotation, transform.parent);
-            bullet.GetComponent<Bullet>().Damage = Damage;
+			GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(-transform.localRotation.eulerAngles), transform.parent.Find("BulletHolder"));
+			bullet.GetComponent<Bullet>().Damage = Damage;
 			bullet.transform.tag = transform.tag;
 			bullet.GetComponent<Bullet>().speed = (MoveSpeed * 2);
 			delayCounter = fireDelay + Random.Range(-0.5f,1);

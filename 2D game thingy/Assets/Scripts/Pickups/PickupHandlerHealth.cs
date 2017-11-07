@@ -31,7 +31,7 @@ public class PickupHandlerHealth : MonoBehaviour {
 	{
 		if (hit.name == "Player")
 		{
-			transform.parent = hit.transform.parent;
+			transform.parent = hit.transform;
 			Destroy(transform.GetComponent<SpriteRenderer>()); //Woo, I'm a ghost
 			Destroy(transform.GetChild(0).gameObject);
 			Active = true;
@@ -55,6 +55,6 @@ public class PickupHandlerHealth : MonoBehaviour {
 	void OnPowerUpDead()
 	{
 		//Reverse of above
-		transform.parent.GetChild(0).GetComponent<Damage>().health = 100;
+		transform.parent.GetComponent<Damage>().health = 100;
 	}
 }

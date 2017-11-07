@@ -10,25 +10,13 @@ public class Damage : MonoBehaviour {
 	{
 		if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup")
 		{
-			try
+			health -= hit.transform.GetComponent<Bullet>().Damage;
+			Destroy(hit.gameObject);
+			if (health <= 0)
 			{
-				health -= hit.transform.GetComponent<Bullet>().Damage;
-				Destroy(hit.gameObject); //needs to be here so we don't kill the player
+				transform.parent.BroadcastMessage("EvaluateChildren"); //Check if the last child has died
+				Destroy(gameObject);
 			}
-			catch //catch for cases in which it's not a bullet (i.e. it's an enemy or debris)
-			{
-				health -= 20; //flat value for now, may change
-			}
-			finally
-			{
-				if (health <= 0)
-				{
-					transform.parent.BroadcastMessage("EvaluateChildren"); //Check if the last child has died
-					Destroy(gameObject);
-				}
-			}
-			
         }
-		
 	}
 }

@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour {
 
 	void Update() {
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 6.0f, (1 << LayerMask.NameToLayer(transform.tag)),-Mathf.Infinity, Mathf.Infinity);
-        Debug.DrawRay(transform.position, transform.up);
 		if (hit.collider != null) //Do this raycast so we don't get screwed over by bullets passing "through" an enemy
 		{
 			transform.position = hit.transform.position;

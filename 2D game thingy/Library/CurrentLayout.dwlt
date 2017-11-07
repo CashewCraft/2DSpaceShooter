@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1680
     height: 968
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 128
+  controlID: 105
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 408, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 73
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_MinSize: {x: 408, y: 221}
   m_MaxSize: {x: 8008, y: 4021}
   vertical: 0
-  controlID: 74
+  controlID: 107
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -389,23 +389,23 @@ MonoBehaviour:
     height: 897
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: f22ffeff
     m_LastClickedID: 0
-    m_ExpandedIDs: 1afcffff00000000
+    m_ExpandedIDs: e44afeff1afcffff00000000c2260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Play Area
+      m_OriginalName: Play Area
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 9928
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -441,14 +441,14 @@ MonoBehaviour:
     width: 518
     height: 484
   m_SceneLighting: 1
-  lastFramingTime: 4199.606098375407
+  lastFramingTime: 130.04946964014633
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.67964, y: -1.0965307, z: 0}
+    m_Target: {x: 36.99819, y: 4.3062806, z: 0}
     speed: 2
-    m_Value: {x: 8.67964, y: -1.0965307, z: 0}
+    m_Value: {x: 36.99819, y: 4.3062806, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -475,9 +475,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 38.51112
+    m_Target: 81.99854
     speed: 2
-    m_Value: 38.51112
+    m_Value: 81.99854
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -532,13 +532,13 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Enemies
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Joshua\Unity\2D game thingy 2\2D game thingy
+  m_LastProjectPath: C:\Users\Joshua\Unity\2D game thingy
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44260000
-    m_LastClickedID: 9796
-    m_ExpandedIDs: 00000000362600004a2600007a26000000ca9a3bffffff7f
+    m_SelectedIDs: 42260000
+    m_LastClickedID: 9794
+    m_ExpandedIDs: 0000000034260000482600007826000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000362600004a2600007a260000
+    m_ExpandedIDs: 00000000342600004826000078260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -593,8 +593,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 5a240000a8270000064affff1426000032290000422900002c26000050260000bceef0ff3865f3ffd2260000a2260000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 5a240000a8270000064affff1426000032290000422900002c26000050260000bceef0ff3865f3ff04270000fe2ffeff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -32,7 +32,7 @@ public class TypeA : MonoBehaviour {
 
         transform.right = new Vector3(Random.Range(BL.x / 2, TR.x / 2), BL.y, 0) - transform.position;
 
-		Transform player = GameObject.Find("ChaseHead").transform.GetChild(0).GetChild(1).GetChild(0);
+		Transform player = GameObject.Find("ChaseHead").transform.GetChild(0).GetChild(1);
 		NewFlag = Instantiate(Flag, player.position, Quaternion.Euler(0,0,(transform.rotation.eulerAngles.z)+90), player);
 		NewFlag.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0); //Make it invisible initially so it doesn't "pop" into correct rotation while visible
 		NewFlag.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);

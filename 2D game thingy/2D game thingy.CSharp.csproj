@@ -81,6 +81,8 @@
     <Compile Include="Assets\Scripts\Enemy scripts\Bumble.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\EnemyFire.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\PickUpOnDeath.cs" />
+    <Compile Include="Assets\Scripts\Enemy scripts\TypeA.cs" />
+    <Compile Include="Assets\Scripts\Enemy scripts\TypeC.cs" />
     <Compile Include="Assets\Scripts\General scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\Main scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Main scripts\GhostBoomFade.cs" />
@@ -95,8 +97,6 @@
     <Compile Include="Assets\Scripts\Pickups\PickupHandlerSpeed.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Shooting.cs" />
-    <Compile Include="Assets\Scripts\Player scripts\SwitchSystem.cs" />
-    <Compile Include="Assets\Scripts\Player scripts\TypeA.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Wander.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

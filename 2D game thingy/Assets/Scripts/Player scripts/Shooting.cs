@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour {
 	void Update () {
 		if (Input.GetButton("Fire1") && delayCounter<=0)
 		{
-			GameObject bullet = Instantiate(projectile, transform.position+RelativePos, Quaternion.Euler(0,0,0), transform.parent.parent);
+			GameObject bullet = Instantiate(projectile, transform.position+RelativePos, Quaternion.Euler(0,0,0), transform.parent);
 			bullet.GetComponent<Bullet>().Damage = Damage;
 			bullet.transform.tag = transform.tag;
 			bullet.GetComponent<Bullet>().speed = (MoveSpeed * 2);
