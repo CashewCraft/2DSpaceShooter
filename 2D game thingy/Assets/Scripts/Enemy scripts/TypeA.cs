@@ -45,7 +45,7 @@ public class TypeA : MonoBehaviour {
 
 	void OnBecameInvisible()
 	{
-		//#EditorCamerasMatter
-		Destroy(gameObject);
+        //#EditorCamerasMatter
+        Destroy(gameObject);
 	}
 }

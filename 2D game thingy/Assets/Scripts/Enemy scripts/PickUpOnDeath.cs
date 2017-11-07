@@ -16,13 +16,13 @@ public class PickUpOnDeath : MonoBehaviour {
 	void EvaluateChildren() //updates how many children are alive
 	{
 		Children--;
+        print(Children);
 		if (Children == 1) //1 because we're excluding the bullet holder
 		{
-			if (Random.Range(1,100) <= PickupChance)
+            if (Random.Range(1,100) <= PickupChance)
 			{
-				DropPickup();
+                DropPickup();
 			}
-			Destroy(gameObject);
 		}
 	}
 

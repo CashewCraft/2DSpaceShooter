@@ -25,27 +25,36 @@ public class TypeC : MonoBehaviour {
 
 	void Update ()
     {
-		if (LR)
-		{
-			transform.position += transform.right * Speed * Time.deltaTime;
-		}
-		else
-		{
-			transform.position -= transform.right * Speed * Time.deltaTime;
-		}
-		if (LR && transform.position.x >= TR.x)
-		{
-			LR = false;
-		}
-		else if (!LR && transform.position.x <= BL.x)
-		{
-			LR = true;
-		}
+        try
+        {
+            if (LR)
+            {
+                transform.position += transform.right * Speed * Time.deltaTime;
+                transform.GetChild(1).position -= transform.right * Speed * Time.deltaTime;
+            }
+            else
+            {
+                transform.position -= transform.right * Speed * Time.deltaTime;
+                transform.GetChild(1).position += transform.right * Speed * Time.deltaTime;
+            }
+            if (LR && transform.position.x >= TR.x)
+            {
+                LR = false;
+            }
+            else if (!LR && transform.position.x <= BL.x)
+            {
+                LR = true;
+            }
+        }
+        catch
+        {
+            Destroy(gameObject);
+        }
 	}
 
 	void OnBecameInvisible()
 	{
-		//#EditorCamerasMatter
+        //#EditorCamerasMatter
 		Destroy(gameObject);
 	}
 }

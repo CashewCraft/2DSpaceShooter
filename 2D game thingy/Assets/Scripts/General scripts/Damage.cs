@@ -8,15 +8,25 @@ public class Damage : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D hit)
 	{
-		if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup")
+		if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup" && health > 0)
 		{
-			health -= hit.transform.GetComponent<Bullet>().Damage;
-			Destroy(hit.gameObject);
-			if (health <= 0)
-			{
-				transform.parent.BroadcastMessage("EvaluateChildren"); //Check if the last child has died
-				Destroy(gameObject);
-			}
+            try
+            {
+                health -= hit.transform.GetComponent<Bullet>().Damage;
+                Destroy(hit.gameObject);
+            }
+            catch
+            {
+                health -= 20;
+            }
+            finally
+            {
+                if (health <= 0)
+                {
+                    transform.parent.BroadcastMessage("EvaluateChildren"); //Check if the last child has died
+                    Destroy(gameObject);
+                }
+            }
         }
 	}
 }
