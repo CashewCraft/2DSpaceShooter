@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\Pickups\PickupHandlerSpeed.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\Player scripts\TextboardDisplay.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Wander.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
