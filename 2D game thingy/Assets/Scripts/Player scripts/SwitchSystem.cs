@@ -58,5 +58,6 @@ public class SwitchSystem : MonoBehaviour
 		}
         GameObject NewPlayer = Instantiate(Base, transform.position, Quaternion.Euler(0, 0, 0), transform);
         NewPlayer.GetComponent<SpriteRenderer>().sprite = Roster[index];
+		NewPlayer.transform.name = "Player";
     }
 }
