@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Enemy scripts\EnemyFire.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\PickUpOnDeath.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\TypeA.cs" />
+     <Compile Include="Assets\Scripts\Enemy scripts\TypeB.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\TypeC.cs" />
      <Compile Include="Assets\Scripts\General scripts\Damage.cs" />
      <Compile Include="Assets\Scripts\Main scripts\Bullet.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Scripts\Pickups\PickupHandlerSpeed.cs" />
      <Compile Include="Assets\Scripts\Player scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\Player scripts\Shooting.cs" />
+     <Compile Include="Assets\Scripts\Player scripts\SwitchSystem.cs" />
      <Compile Include="Assets\Scripts\Player scripts\TextboardDisplay.cs" />
      <Compile Include="Assets\Scripts\Player scripts\Wander.cs" />
  <Reference Include="UnityEngine.UI">

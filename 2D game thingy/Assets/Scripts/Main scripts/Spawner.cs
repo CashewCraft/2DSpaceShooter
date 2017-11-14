@@ -10,8 +10,11 @@ public class Spawner : MonoBehaviour {
 	public float ADelayMax;
 
 	public bool SpawnB;
+    public float BDelayMin;
+    private float BDelayCounter = 0;
+    public float BDelayMax;
 
-	public bool SpawnC;
+    public bool SpawnC;
 	public float CDelayMin;
 	private float CDelayCounter = 0;
 	public float CDelayMax;
@@ -19,7 +22,7 @@ public class Spawner : MonoBehaviour {
 	public bool SpawnD;
 	
 	public GameObject TypeA;
-	public GameObject TypeC;
+	public GameObject TypeB;
 
 	void Update () {
 		if (SpawnA && ADelayCounter <= 0)
@@ -28,11 +31,11 @@ public class Spawner : MonoBehaviour {
 			ADelayCounter = Random.Range(ADelayMin, ADelayMax);
 		}
 		ADelayCounter -= Time.deltaTime;
-		if (SpawnC && CDelayCounter <= 0)
+		if (SpawnB && BDelayCounter <= 0)
 		{
-			Instantiate(TypeC, new Vector3(999, 999, 999), Quaternion.Euler(0, 0, 0));
-			CDelayCounter = Random.Range(CDelayMin, CDelayMax);
+			Instantiate(TypeB, new Vector3(999, 999, 999), Quaternion.Euler(0, 0, 0));
+			BDelayCounter = Random.Range(BDelayMin, BDelayMax);
 		}
-		CDelayCounter -= Time.deltaTime;
-	}
+		BDelayCounter -= Time.deltaTime;
+    }
 }

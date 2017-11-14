@@ -30,7 +30,6 @@ public class Damage : MonoBehaviour {
         }
 		else if (hit.transform.tag == "Pickup")
 		{
-			print("ayy");
 			hit.transform.BroadcastMessage("Tag",transform);
 		}
 	}

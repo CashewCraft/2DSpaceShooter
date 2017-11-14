@@ -14,6 +14,7 @@ public class SwitchSystem : MonoBehaviour
     void Start()
     {
         StartPos = transform.position;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Roster[index];
     }
 
     void Update()
