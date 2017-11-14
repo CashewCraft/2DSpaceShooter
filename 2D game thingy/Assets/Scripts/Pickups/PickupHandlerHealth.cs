@@ -27,11 +27,11 @@ public class PickupHandlerHealth : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D hit)
+	void Tag(Transform hit)
 	{
 		if (hit.name == "Player")
 		{
-			transform.parent = hit.transform;
+			transform.parent = hit;
 			Destroy(transform.GetComponent<SpriteRenderer>()); //Woo, I'm a ghost
 			Destroy(transform.GetChild(0).gameObject);
 			Active = true;

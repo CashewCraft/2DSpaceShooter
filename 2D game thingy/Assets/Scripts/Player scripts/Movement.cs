@@ -19,28 +19,28 @@ public class Movement : MonoBehaviour {
 	}
 
     void Update () {
-        if (Input.GetKey("w") && transform.localPosition.y < (PlayAreaY - (PlayAreaY / 15)) )
+        if (Input.GetButton("Up") && transform.localPosition.y < (PlayAreaY - (PlayAreaY / 15)) )
         {
             transform.Translate(new Vector3(0,(SpeedY*1.2f) * Time.deltaTime,0));
             //Move upwards at a rate of Base*1.2
         }
-        else if(Input.GetKey("s") && transform.localPosition.y > -(PlayAreaY - (PlayAreaY / 15)) )
+        else if(Input.GetButton("Down") && transform.localPosition.y > -(PlayAreaY - (PlayAreaY / 15)) )
         {
             transform.Translate(new Vector3(0,((-SpeedY/8)*7) * Time.deltaTime, 0));
             //Move downwards at a rate of 7/8ths Base
         }
-        else if (!Input.GetKey("w") && transform.localPosition.y > -(PlayAreaY - (PlayAreaY / 15)) )
+        else if (!Input.GetButton("Up") && transform.localPosition.y > -(PlayAreaY - (PlayAreaY / 15)) )
         {
             transform.Translate(new Vector3(0,((-SpeedY / 4) * 2) * Time.deltaTime, 0));
             //Move downwards at a rate of 1/2 Base while not holding any horizontal movement key
         }
 
-        if (Input.GetKey("d") && transform.localPosition.x < (PlayAreaX - (PlayAreaX / 10)) )
+        if (Input.GetButton("Right") && transform.localPosition.x < (PlayAreaX - (PlayAreaX / 10)) )
         {
             transform.Translate(new Vector3(SpeedX*Time.deltaTime,0,0));
             //Move up at base
         }
-        else if (Input.GetKey("a") && transform.localPosition.x > -(PlayAreaX - (PlayAreaX / 10)) )
+        else if (Input.GetButton("Left") && transform.localPosition.x > -(PlayAreaX - (PlayAreaX / 10)) )
         {
             transform.Translate(new Vector3(-SpeedX*Time.deltaTime, 0,0));
         }

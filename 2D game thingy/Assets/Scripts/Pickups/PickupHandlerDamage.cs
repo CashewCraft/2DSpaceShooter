@@ -27,7 +27,7 @@ public class PickupHandlerDamage : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D hit)
+	void Tag(Transform hit)
 	{
 		if (hit.name == "Player")
 		{
@@ -50,12 +50,12 @@ public class PickupHandlerDamage : MonoBehaviour {
 	void OnPowerUpActive()
 	{
 		//Powerup stuff
-		transform.parent.GetComponent<Shooting>().Damage *= 2;
+		transform.parent.parent.GetComponent<Shooting>().Damage *= 2;
 	}
 
 	void OnPowerUpDead()
 	{
 		//Reverse of above
-		transform.parent.GetComponent<Shooting>().Damage /= 2;
+		transform.parent.parent.GetComponent<Shooting>().Damage /= 2;
 	}
 }

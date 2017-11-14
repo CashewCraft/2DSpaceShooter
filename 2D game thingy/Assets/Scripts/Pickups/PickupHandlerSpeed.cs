@@ -27,7 +27,7 @@ public class PickupHandlerSpeed : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D hit)
+	void Tag(Transform hit)
 	{
 		if (hit.name == "Player")
 		{

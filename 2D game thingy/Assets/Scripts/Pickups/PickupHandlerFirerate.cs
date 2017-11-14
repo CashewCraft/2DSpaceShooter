@@ -27,7 +27,7 @@ public class PickupHandlerFirerate : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D hit)
+	void Tag(Transform hit)
 	{
 		if (hit.name == "Player")
 		{
@@ -50,15 +50,15 @@ public class PickupHandlerFirerate : MonoBehaviour {
 	void OnPowerUpActive()
 	{
 		//Powerup stuff
-		transform.parent.GetComponent<Shooting>().fireDelay /= 2;
-		transform.parent.GetComponent<Shooting>().Damage /= 2;
+		transform.parent.parent.GetComponent<Shooting>().fireDelay /= 2;
+		transform.parent.parent.GetComponent<Shooting>().Damage /= 2;
 		//Adjust damage because firerate is ment to be ability to saturate screen with bullets, not DPS
 	}
 
 	void OnPowerUpDead()
 	{
 		//Reverse of above
-		transform.parent.GetComponent<Shooting>().fireDelay *= 2;
-		transform.parent.GetComponent<Shooting>().Damage *= 2;
+		transform.parent.parent.GetComponent<Shooting>().fireDelay *= 2;
+		transform.parent.parent.GetComponent<Shooting>().Damage *= 2;
 	}
 }
