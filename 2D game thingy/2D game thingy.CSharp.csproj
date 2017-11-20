@@ -70,9 +70,6 @@
     <Reference Include="UnityEngine.Timeline">
       <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
@@ -82,8 +79,10 @@
     <Compile Include="Assets\Scripts\Enemy scripts\EnemyFire.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\PickUpOnDeath.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\TypeA.cs" />
+    <Compile Include="Assets\Scripts\Enemy scripts\TypeB.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\TypeC.cs" />
     <Compile Include="Assets\Scripts\General scripts\Damage.cs" />
+    <Compile Include="Assets\Scripts\General scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\Main scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Main scripts\GhostBoomFade.cs" />
     <Compile Include="Assets\Scripts\Main scripts\GhostBoomReset.cs" />

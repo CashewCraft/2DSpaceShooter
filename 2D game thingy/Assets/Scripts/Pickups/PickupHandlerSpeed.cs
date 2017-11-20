@@ -32,7 +32,6 @@ public class PickupHandlerSpeed : MonoBehaviour {
 		if (hit.name == "Player")
 		{
 			transform.parent = hit.transform;
-			print(transform.parent.name);
 			Destroy(transform.GetComponent<SpriteRenderer>()); //Woo, I'm a ghost
 			Destroy(transform.GetChild(0).gameObject);
 			Active = true;
@@ -51,15 +50,15 @@ public class PickupHandlerSpeed : MonoBehaviour {
 	void OnPowerUpActive()
 	{
 		//Powerup stuff
-		transform.parent.GetComponent<Movement>().SpeedX *= 1.5f;
-		transform.parent.GetComponent<Movement>().SpeedY *= 1.5f;
+		transform.parent.parent.GetComponent<Movement>().SpeedX *= 1.5f;
+		transform.parent.parent.GetComponent<Movement>().SpeedY *= 1.5f;
 	}
 
 	void OnPowerUpDead()
 	{
 		//Reverse of above
-		transform.parent.GetComponent<Movement>().SpeedX /= 1.5f;
-		transform.parent.GetComponent<Movement>().SpeedY /= 1.5f;
+		transform.parent.parent.GetComponent<Movement>().SpeedX /= 1.5f;
+		transform.parent.parent.GetComponent<Movement>().SpeedY /= 1.5f;
 		//note how it doesn't change the value directly, so it can stack
 	}
 }

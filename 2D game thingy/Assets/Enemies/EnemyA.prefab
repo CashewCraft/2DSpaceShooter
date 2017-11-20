@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 114197710484567584}
   m_Layer: 0
   m_Name: EnemyA
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4d359bf870847439ab3582778157f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupChance: 100
+  PickupChance: 15
   PickupList:
   - {fileID: 1447545979630518, guid: 9aad90153db9e564fbae7b48bed65a0e, type: 2}
 --- !u!114 &114230166481115556

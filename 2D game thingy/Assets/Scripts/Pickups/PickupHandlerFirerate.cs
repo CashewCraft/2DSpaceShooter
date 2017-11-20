@@ -51,7 +51,7 @@ public class PickupHandlerFirerate : MonoBehaviour {
 	{
 		//Powerup stuff
 		transform.parent.parent.GetComponent<Shooting>().fireDelay /= 2;
-		transform.parent.parent.GetComponent<Shooting>().Damage /= 2;
+		transform.parent.parent.GetComponent<Shooting>().Damage = Mathf.Max(1, transform.parent.parent.GetComponent<Shooting>().Damage / 2);
 		//Adjust damage because firerate is ment to be ability to saturate screen with bullets, not DPS
 	}
 
