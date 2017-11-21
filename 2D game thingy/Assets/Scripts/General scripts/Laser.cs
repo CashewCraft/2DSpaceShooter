@@ -22,7 +22,7 @@ public class Laser : MonoBehaviour {
 		PulseCounter = PulseRate;
 		Flag = Instantiate(Flag, transform.position, transform.rotation,transform);
 		Beam = Instantiate(Beam, transform);
-		Beam.transform.localPosition = new Vector3(Beam.transform.localScale.y / 2, 0, 0);
+		Beam.transform.localPosition = new Vector3(Beam.transform.localScale.y / 2, 0, 1);
         Beam.transform.localRotation = Quaternion.Euler(0, 0, 90);
         Beam.GetComponent<SpriteRenderer>().color = new Color(Beam.GetComponent<SpriteRenderer>().color.r, Beam.GetComponent<SpriteRenderer>().color.g, Beam.GetComponent<SpriteRenderer>().color.b, 0);
 	}
@@ -45,12 +45,10 @@ public class Laser : MonoBehaviour {
 				if (PulseCounter <= 0)
 				{
 					PulseCounter = PulseRate;
-					print("Pew");
 					GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(0,0,-90), transform);
 					bullet.GetComponent<Bullet>().Damage = Damage;
 					bullet.transform.tag = transform.tag;
 					bullet.GetComponent<Bullet>().speed = 80;
-					print(bullet.transform.position);
 				}
             }
 			else
