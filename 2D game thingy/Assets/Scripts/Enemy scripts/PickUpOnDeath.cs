@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PickUpOnDeath : MonoBehaviour {
 
-	public int PickupChance; //chance to drop, as a percentage
+	public float PickupChance; //chance to drop, as a percentage
 	public GameObject[] PickupList; //array of pickup prefabs
 	private int Children;
+
+	public int MaxNoPickups = 1;
 
 	void Start()
 	{
@@ -27,6 +29,14 @@ public class PickUpOnDeath : MonoBehaviour {
 
 	void DropPickup()
 	{
-		Instantiate(PickupList[Random.Range(0, PickupList.Length)], transform.position, new Quaternion(0,0,0,0), null);
+		for (int i = 0; i < MaxNoPickups; i++)
+		{
+			print("Generating drop #" + i + " with a chance of " + PickupChance + "%");
+			if ((i > 0 && Random.Range(1, 100) <= PickupChance) || i == 0)
+			{
+				PickupChance *= (PickupChance / 100);
+				Instantiate(PickupList[Random.Range(0, PickupList.Length)], (Vector2)transform.position + (Random.insideUnitCircle * 3), new Quaternion(0, 0, 0, 0), null);
+			}
+		}
 	}
 }

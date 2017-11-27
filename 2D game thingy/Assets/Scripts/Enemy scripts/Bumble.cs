@@ -18,10 +18,10 @@ public class Bumble : MonoBehaviour {
 	}
 
 	void Update () {
-		if (transform.position == target)
+		if (transform.localPosition == target)
         {
 			target = (Vector2)StartPos + (Random.insideUnitCircle * Magnitude);
 		}
-		transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime*Magnitude*2);
+		transform.localPosition = Vector3.MoveTowards(transform.localPosition, target, Time.deltaTime*Magnitude);
 	}
 }

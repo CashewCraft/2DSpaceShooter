@@ -325,8 +325,6 @@ MonoBehaviour:
   BeamHandler: {fileID: 1417020847676882, guid: 775a039a126d4544086282e4a737c954,
     type: 2}
   Speed: 12
-  DelayMin: 1.5
-  DelayMax: 3.2
 --- !u!114 &114189265992005168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,6 +365,7 @@ MonoBehaviour:
   - {fileID: 1874371432717686, guid: 21ea1a1a66b02dc4db801e98f469a8b0, type: 2}
   - {fileID: 1996279023866814, guid: 9fe3f5ac4fbd23942acf962bc66e368a, type: 2}
   - {fileID: 1530834298176200, guid: 7e34436f0c464a642a2064fa3285e830, type: 2}
+  MaxNoPickups: 1
 --- !u!114 &114789367222193330
 MonoBehaviour:
   m_ObjectHideFlags: 1

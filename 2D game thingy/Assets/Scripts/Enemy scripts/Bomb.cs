@@ -17,6 +17,6 @@ public class Bomb : MonoBehaviour {
     void EvaluateChildren()
     {
         print("Boom");
-        Destroy(gameObject);
+		Destroy(gameObject);
     }
 }

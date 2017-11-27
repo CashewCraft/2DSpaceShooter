@@ -441,6 +441,7 @@ MonoBehaviour:
   PickupChance: 15
   PickupList:
   - {fileID: 1447545979630518, guid: 9aad90153db9e564fbae7b48bed65a0e, type: 2}
+  MaxNoPickups: 3
 --- !u!114 &114230166481115556
 MonoBehaviour:
   m_ObjectHideFlags: 1
