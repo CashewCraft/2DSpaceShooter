@@ -6,6 +6,11 @@ public class Bomb : MonoBehaviour {
 
     public Transform Player;
 
+    void Start()
+    {
+        Player = GameObject.Find("ChaseHead").transform.GetChild(0).GetChild(1);
+    }
+
 	void Update ()
     {
 		if (Vector3.Distance(Player.position, transform.position) < 3.75f)

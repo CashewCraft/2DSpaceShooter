@@ -15,41 +15,10 @@ public class TypeC : MonoBehaviour {
 
 	void Start () {
 
-        int OffSet = 0; //how far off the side of the screen the enemies will spawn
-
         BL = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)); //Get the top left corner at Z=0
         TR = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 10));
 		
-        transform.position = TR;
-	}
-
-	void Update ()
-    {
-        try
-        {
-            if (LR)
-            {
-                transform.position += transform.right * Speed * Time.deltaTime;
-                transform.GetChild(1).position -= transform.right * Speed * Time.deltaTime;
-            }
-            else
-            {
-                transform.position -= transform.right * Speed * Time.deltaTime;
-                transform.GetChild(1).position += transform.right * Speed * Time.deltaTime;
-            }
-            if (LR && transform.position.x >= TR.x)
-            {
-                LR = false;
-            }
-            else if (!LR && transform.position.x <= BL.x)
-            {
-                LR = true;
-            }
-        }
-        catch
-        {
-            Destroy(gameObject);
-        }
+        transform.position = new Vector2 (0,TR.y);
 	}
 
 	void OnBecameInvisible()

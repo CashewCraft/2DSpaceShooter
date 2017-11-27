@@ -34,11 +34,14 @@ public class TurretControl : MonoBehaviour {
 
 	void Start()
 	{
-		Patterns = new List<int>[5] {
+		Patterns = new List<int>[8] {
 		new List<int> { 1, 45, 5, 1, 50, 15, 1, -5, -45, 1, -15, -50 }, new List<int> { 1, 50, 15, 1, 45, 5, 1, -15, -50, 1, -5, -45 },
 		new List<int> { -1, 45, 5, -1, 50, 15, -1, -5, -45, -1, -15, -50 }, new List<int> { -1, 50, 15, -1, 45, 5, -1, -15, -50, -1, -5, -45 },
-		new List<int> { 1, 20, 0, -1, 20, 0, 1, -25, -50, 1, -25, -50, -1, -25, -50, -1, -25, -50 }
-		};
+		new List<int> { 1, 20, 0, -1, 20, 0, 1, -25, -50, 1, -25, -50, -1, -25, -50, -1, -25, -50 },
+        new List<int> { -1, 20, 0, 1, 20, 0, -1, -25, -50, -1, -25, -50, 1, -25, -50, 1, -25, -50 },
+        new List<int> { 1, 30, 0, -1, 30, 0 },
+        new List<int> { 1, 60, 30, -1, 60, 30, 1, 26, 0, -1, 26, 0 }
+        };
         Turret1 = transform.GetChild(0);
 		Turret2 = transform.GetChild(1);
 
@@ -66,7 +69,7 @@ public class TurretControl : MonoBehaviour {
 			{
 				if (PatternPos == Pattern.GetLength(0))
 				{
-					PatternIndex = Random.Range(0, 5);
+                    PatternIndex = Random.Range(0, Pattern.GetLength(0));
 					Pattern = Patterns.ElementAt(PatternIndex).ToArray();
 					PatternPos = 0;
 					Timer = fireRate;
