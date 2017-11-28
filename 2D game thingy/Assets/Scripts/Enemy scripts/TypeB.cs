@@ -5,8 +5,8 @@ using UnityEngine;
 public class TypeB : MonoBehaviour {
 
     private bool LR;
-    private Vector3 BL;
-    private Vector3 TL;
+    public Vector3 BL;
+    public Vector3 TR;
 
 	public GameObject BeamHandler;
 
@@ -40,9 +40,6 @@ public class TypeB : MonoBehaviour {
         
 		SelectedFormation = Random.Range(0, 3);
         int OffSet = -2; //how far off the side of the screen the enemies will spawn
-
-        Vector3 BL = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)); //Get the top left corner at Z=0
-        Vector3 TR = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 10));
 
         TurnPoint = Random.Range(TR.x * -0.8f, TR.x * 0.8f);
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class TypeA : MonoBehaviour {
 
     private bool LR;
-    private Vector3 BL;
-    private Vector3 TL;
+    public Vector3 BL;
+    public Vector3 TR;
 
     public float Speed = 8;
 	public GameObject Flag;
@@ -17,9 +17,6 @@ public class TypeA : MonoBehaviour {
         LR = (Random.Range(0, 2) == 0);
 
         int OffSet = 0; //how far off the side of the screen the enemies will spawn
-
-        Vector3 BL = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)); //Get the top left corner at Z=0
-        Vector3 TR = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 10));
 
         if (LR)
         {
