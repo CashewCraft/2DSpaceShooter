@@ -5,6 +5,7 @@ using UnityEngine;
 public class Damage : MonoBehaviour {
 
 	public int health = 100;
+    public bool IsPlayer = false;
 
 	public void TakeDamage(int amount) //Generic function for taking damage via raycast, essentially bypassing the need to do error checking
 	{
@@ -12,6 +13,10 @@ public class Damage : MonoBehaviour {
 		print("Old health: " + health);
 		health -= amount;
 		print("New health: " + health);
+        if (IsPlayer)
+        {
+            Camera.main.transform.BroadcastMessage("SetHealth", health);
+        }
 	}
 
 	void OnTriggerEnter2D(Collider2D hit)
@@ -29,6 +34,10 @@ public class Damage : MonoBehaviour {
             }
             finally
             {
+                if (IsPlayer)
+                {
+                    Camera.main.transform.BroadcastMessage("SetHealth", health);
+                }
                 if (health <= 0)
                 {
 					Destroy(gameObject);

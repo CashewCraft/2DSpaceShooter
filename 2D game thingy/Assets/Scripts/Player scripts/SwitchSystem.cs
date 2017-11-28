@@ -8,11 +8,12 @@ public class SwitchSystem : MonoBehaviour
     public Sprite[] Roster = new Sprite[6];
     public GameObject Base;
     private int index = 0;
-    public int remainingPla = 5;
+    public int remainingPla = 3;
     private Vector3 StartPos;
 
     void Start()
     {
+        Camera.main.transform.BroadcastMessage("SetLives", remainingPla + 1);
         StartPos = transform.position;
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Roster[index];
     }
@@ -42,8 +43,10 @@ public class SwitchSystem : MonoBehaviour
 		else if (remainingPla == 0) //That was our last life
 		{
 			Destroy(gameObject);
-			//death stuff
-		}
+            Camera.main.transform.BroadcastMessage("SetHealth", 0);
+            Camera.main.transform.BroadcastMessage("SetLives", 0);
+            //death stuff
+        }
 		else
 		{
 			Roster[index] = null;
@@ -56,7 +59,8 @@ public class SwitchSystem : MonoBehaviour
 					Roster[i] = null;
 				}
 			}
-		}
+            Camera.main.transform.BroadcastMessage("SetLives", remainingPla);
+        }
         GameObject NewPlayer = Instantiate(Base, transform.position, Quaternion.Euler(0, 0, 0), transform);
         NewPlayer.GetComponent<SpriteRenderer>().sprite = Roster[index];
 		NewPlayer.transform.name = "Player";
