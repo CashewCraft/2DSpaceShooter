@@ -56,5 +56,6 @@ public class PickupHandlerHealth : MonoBehaviour {
 	{
 		//Reverse of above
 		transform.parent.GetComponent<Damage>().health = 100;
+		Camera.main.transform.BroadcastMessage("SetHealth", transform.parent.GetComponent<Damage>().health);
 	}
 }

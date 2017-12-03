@@ -73,19 +73,19 @@ public class TurretControl : MonoBehaviour {
 					Pattern = Patterns.ElementAt(PatternIndex).ToArray();
 					PatternPos = 0;
 					Timer = fireRate;
-					print("Reset pattern");
+					//print("Reset pattern");
 					Destroy(ShieldInst);
 				}
 				else
 				{
-					print("Setting Counter for turret 1 to " + Pattern[PatternPos+1] + " with a limit of " + Pattern[PatternPos + 2] + ", dir counter "+ Pattern[PatternPos]);
+					//print("Setting Counter for turret 1 to " + Pattern[PatternPos+1] + " with a limit of " + Pattern[PatternPos + 2] + ", dir counter "+ Pattern[PatternPos]);
 					P1dir = Pattern[PatternPos];
 					PatternPos++;
                     PatternTickCounter1 = Pattern[PatternPos];
 					PatternPos++;
 					PatternTickLimit1 = Pattern[PatternPos];
 					PatternPos++;
-					print("Setting Counter for turret 2 to " + Pattern[PatternPos + 1] + " with a limit of " + Pattern[PatternPos + 2] + ", dir counter " + Pattern[PatternPos]);
+					//print("Setting Counter for turret 2 to " + Pattern[PatternPos + 1] + " with a limit of " + Pattern[PatternPos + 2] + ", dir counter " + Pattern[PatternPos]);
 					P2dir = Pattern[PatternPos];
 					PatternPos++;
 					PatternTickCounter2 = Pattern[PatternPos];

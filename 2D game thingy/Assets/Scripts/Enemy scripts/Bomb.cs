@@ -24,4 +24,10 @@ public class Bomb : MonoBehaviour {
         print("Boom");
 		Destroy(gameObject);
     }
+
+	void OnBecameInvisible()
+	{
+		//#EditorCamerasMatter
+		Destroy(gameObject);
+	}
 }
