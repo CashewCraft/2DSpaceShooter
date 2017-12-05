@@ -11,12 +11,14 @@ public class Starfield : MonoBehaviour {
 	private Vector3 BL;
 	private Vector3 TR;
 
+	public float limiter = 0.8f;
+
 	void Start () {
 
 		BL = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)); //Get the bottom left corner at Z=0
-		BL.x = (BL.x * 0.8f);
+		BL.x = (BL.x * limiter);
 		TR = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 10)); //Get the top right corner at Z=0
-		TR.x = (TR.x * 0.8f);
+		TR.x = (TR.x * limiter);
 
 		distances = new int[NoStars];
 

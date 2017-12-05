@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Enemy scripts\TypeB.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\TypeC.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\TypeD.cs" />
+    <Compile Include="Assets\Scripts\General scripts\Button.cs" />
     <Compile Include="Assets\Scripts\General scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\General scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\General scripts\ShieldIndicator.cs" />

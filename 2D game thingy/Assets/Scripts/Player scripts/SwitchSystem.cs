@@ -119,7 +119,7 @@ public class SwitchSystem : MonoBehaviour
         NewPlayer.GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
 		NewPlayer.transform.name = "Player";
 		print("New Player spawned");
-		foreach (Arrow i in Roster)
+		foreach (ShipTemplate i in Roster)
 		{
 			i.Ship = NewPlayer.transform;
 		}
