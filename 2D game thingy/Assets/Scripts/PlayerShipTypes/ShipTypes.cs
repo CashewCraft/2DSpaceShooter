@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ShipTypes : MonoBehaviour
 {
-	private string[] NameList = new string[1] { "Arrow" };
+	private string[] NameList = new string[2] { "Arrow", "Escort" };
 
-	public Sprite[] Sprites = new Sprite[1];
-	public GameObject[] Bullets = new GameObject[1];
-	public GameObject[] Secondary = new GameObject[1];
+	public Sprite[] Sprites = new Sprite[2];
+	public GameObject[] Bullets = new GameObject[2];
+	public GameObject[] Secondary = new GameObject[2];
 
 	public int GetIndexFromName(string Name)
 	{

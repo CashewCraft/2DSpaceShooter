@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LivesUI : MonoBehaviour {
-    void SetLives(int[] remainingindex)
+    void SetLives(StoreItem it)
     {
-        print("Setting lives to " + remainingindex[0]);
+        print("Setting lives to " + it.remain);
         for (int i = 0; i < 6; i++)
         {
-            if (i > remainingindex[0]-1)
+            if (i > it.remain-1)
             {
                 transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+				transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = it.spriteLis[i];
 				transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 0);
 			}
             else
             {
                 transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
-				if (i == remainingindex[1])
+				transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = it.spriteLis[i];
+				if (i == it.index)
 				{
 					transform.GetChild(i).GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 0, 255);
 				}

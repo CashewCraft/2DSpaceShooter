@@ -11,8 +11,13 @@ public class PMissile : MonoBehaviour {
 	void Update () {
 		if (ActivateTime <= 0 && target == null)
 		{
-			target = GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].transform;
-			if (target.name != "Body")
+			try
+			{
+				target = GameObject.FindGameObjectsWithTag("Enemy")[Random.Range(0, GameObject.FindGameObjectsWithTag("Enemy").Length)].transform;
+			}
+			catch { Destroy(gameObject); return; } //No available targets, detonate
+
+			if (!target.name.Contains("Body"))
 			{
 				target = null;
 			}

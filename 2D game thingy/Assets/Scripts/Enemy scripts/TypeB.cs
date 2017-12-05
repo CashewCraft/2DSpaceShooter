@@ -71,18 +71,18 @@ public class TypeB : MonoBehaviour {
 
 	void SetFormation(int Selection)
 	{
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 4; i++)
 		{
 			try
 			{
-				if ((Vector2)transform.Find("Fighter("+i+")").position != new Vector2(formations[Selection, i], formations[Selection, (i+4)]) && !IsMoving[i])
+				if ((Vector2)transform.Find("Body("+i+")").position != new Vector2(formations[Selection, i], formations[Selection, (i+4)]) && !IsMoving[i])
 				{
-					transform.Find("Fighter("+i+")").localPosition = new Vector2(formations[Selection, i], formations[Selection, i+4]);
+					transform.Find("Body("+i+")").localPosition = new Vector2(formations[Selection, i], formations[Selection, i+4]);
 					IsMoving[i] = true;
                 }
 				if (formations[Selection,(i+8)] <= 0)
 				{
-					GameObject l = Instantiate(BeamHandler, transform.Find("Fighter("+i+")"));
+					GameObject l = Instantiate(BeamHandler, transform.Find("Body("+i+")"));
 					l.tag = transform.tag;
 					formations[Selection, (i + 8)] = 256;
                 }

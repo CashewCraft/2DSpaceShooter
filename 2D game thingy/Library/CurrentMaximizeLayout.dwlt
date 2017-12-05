@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1680
     height: 918
-  m_MinSize: {x: 879, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 883, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 14146
+  controlID: 35263
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,8 +119,8 @@ MonoBehaviour:
     y: 0
     width: 357
     height: 918
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 4}
   m_Panes:
   - {fileID: 4}
@@ -156,7 +156,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: f60dfdff4ab5fdff74d1fdff7ad1fdff7cd1fdff90d1fdff82b2ffff8ab2ffff1afcffff00000000fe26000004270000162700004e27000076270000802700008627000092270000a0270000
+    m_ExpandedIDs: 9091f8ff1afcffff000000004427000050270000562700005c2700008227000094270000ac270000c0270000c6270000d0270000de270000e4270000fe270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 14147
+  controlID: 35264
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 14148
+  controlID: 35265
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 446
     height: 512
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -279,14 +279,14 @@ MonoBehaviour:
     width: 442
     height: 491
   m_SceneLighting: 1
-  lastFramingTime: 32265.731709689735
+  lastFramingTime: 50706.48734163443
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 41.0338, y: -5.9672, z: 0}
+    m_Target: {x: 4.0763035, y: 3.1172771, z: 0}
     speed: 2
-    m_Value: {x: 41.0338, y: -5.9672, z: 0}
+    m_Value: {x: 4.0763035, y: 3.1172771, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -313,9 +313,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 60.93676
+    m_Target: 15.221228
     speed: 2
-    m_Value: 60.93676
+    m_Value: 15.221228
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -369,8 +369,8 @@ MonoBehaviour:
     y: 512
     width: 833
     height: 406
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 234, y: 271}
+  m_MaxSize: {x: 10004, y: 10021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -415,20 +415,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Enemies
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Joshua\Unity\2D game thingy 2\2DSpaceShooter\2D game
     thingy
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca260000
-    m_LastClickedID: 9930
-    m_ExpandedIDs: 000000006226000088260000d226000000ca9a3bffffff7f
+    m_SelectedIDs: 80260000
+    m_LastClickedID: 9856
+    m_ExpandedIDs: 000000006026000086260000d026000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -456,7 +456,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006226000088260000d226000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000006026000086260000d026000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,8 +483,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 5a240000a8270000064affff1426000032290000422900002c26000050260000bceef0ff3865f3ff04270000fe2ffeff18290000662900007026000078260000b0280000c62600005a2700000a29ffff182a0000da280000c0260000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 5a240000a8270000064affff1426000032290000422900002c26000050260000bceef0ff3865f3ff04270000fe2ffeff18290000662900007026000078260000b0280000c62600005a2700000a29ffff182a0000da280000c0260000e811fbffaa260000b6260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

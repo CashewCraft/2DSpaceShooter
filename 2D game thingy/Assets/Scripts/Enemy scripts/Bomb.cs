@@ -13,17 +13,13 @@ public class Bomb : MonoBehaviour {
 
 	void Update ()
     {
-		if (Vector3.Distance(Player.position, transform.position) < 3.75f)
+		if (Vector3.Distance(Player.position, transform.position) < 1.75f)
         {
-            EvaluateChildren();
-        }
+			Player.GetChild(0).GetComponent<Damage>().TakeDamage(20);
+			BroadcastMessage("EvaluateChildren");
+            Destroy(transform.GetChild(0));
+		}
 	}
-
-    void EvaluateChildren()
-    {
-        print("Boom");
-		Destroy(gameObject);
-    }
 
 	void OnBecameInvisible()
 	{

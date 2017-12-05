@@ -7,6 +7,7 @@ public class PickupHandlerDamage : MonoBehaviour {
 	public float speed = 10;
 	private bool Active = false;
 	public float lifeSpan = 20;
+	public int index;
 
 	void Update () {
 		if (!Active)
@@ -35,6 +36,7 @@ public class PickupHandlerDamage : MonoBehaviour {
 			Destroy(transform.GetComponent<SpriteRenderer>()); //Woo, I'm a ghost
 			Destroy(transform.GetChild(0).gameObject);
 			Active = true;
+			index = transform.parent.parent.GetComponent<SwitchSystem>().index;
 			OnPowerUpActive();
 		}
 	}
@@ -50,12 +52,12 @@ public class PickupHandlerDamage : MonoBehaviour {
 	void OnPowerUpActive()
 	{
 		//Powerup stuff
-		transform.parent.parent.GetComponent<Shooting>().Damage *= 2;
+		transform.parent.parent.GetComponent<SwitchSystem>().Roster[index].Damage *= 2;
 	}
 
 	void OnPowerUpDead()
 	{
 		//Reverse of above
-		transform.parent.parent.GetComponent<Shooting>().Damage /= 2;
+		transform.parent.parent.GetComponent<SwitchSystem>().Roster[index].Damage /= 2;
 	}
 }

@@ -30,12 +30,12 @@ public class Organiser : MonoBehaviour {
         transform.GetChild(4).localScale = new Vector3((TR.x / 4)*2, TR.y*2,1);
         transform.GetChild(4).localPosition = new Vector3(TR.x+(TR.x / 4), 0,0);
         transform.GetChild(4).parent = transform.GetChild(1); //Move the UI container under the camera so it remains with it
+		transform.GetChild(4).parent = transform.GetChild(1);
 
 		transform.GetChild(1).parent = transform.GetChild(0); //make the camera and player move as one, the hierarchy adjusts as we do this so we can just copy-paste 
 
         transform.GetChild(1).GetComponent<Movement>().SpeedX = (-(BL.x) / 16) * transform.GetChild(1).GetComponent<Movement>().Speed; //Change the speed of the player and it's bullets
         transform.GetChild(1).GetComponent<Movement>().SpeedY = transform.GetChild(1).GetComponent<Movement>().SpeedX * (-(BL.x) / -(BL.y)); //This is important for extremely big/small resolutions
-        transform.GetChild(1).GetComponent<Shooting>().MoveSpeed = transform.GetChild(1).GetComponent<Movement>().SpeedX * (-(BL.x) / -(BL.y));
 
         transform.GetChild(1).parent = transform.GetChild(0); //Finish moving the player
 

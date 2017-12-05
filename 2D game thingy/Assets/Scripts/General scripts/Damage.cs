@@ -17,10 +17,7 @@ public class Damage : MonoBehaviour {
 
 	public void TakeDamage(int amount) //Generic function for taking damage via raycast, essentially bypassing the need to do error checking
 	{
-		print(transform.name);
-		print("Old health: " + health);
 		health -= amount;
-		print("New health: " + health);
         if (IsPlayer)
         {
             Camera.main.transform.BroadcastMessage("SetHealth", health);
@@ -29,7 +26,6 @@ public class Damage : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D hit)
 	{
-		print("hit " + hit.transform.name);
 		if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup" && health > 0)
 		{
             try
@@ -40,7 +36,6 @@ public class Damage : MonoBehaviour {
             catch
             {
                 health -= 20;
-				Destroy(hit.gameObject);
 			}
             finally
             {

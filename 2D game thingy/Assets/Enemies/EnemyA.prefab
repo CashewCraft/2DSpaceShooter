@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf22212370dc34792a82b932720b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnitude: 0.5
+  Magnitude: 0.2
 --- !u!114 &114197710484567584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -443,7 +443,7 @@ MonoBehaviour:
   PickupChance: 15
   PickupList:
   - {fileID: 1447545979630518, guid: 9aad90153db9e564fbae7b48bed65a0e, type: 2}
-  MaxNoPickups: 3
+  MaxNoPickups: 1
 --- !u!114 &114230166481115556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf22212370dc34792a82b932720b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnitude: 0.5
+  Magnitude: 0.2
 --- !u!114 &114539744556404240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf22212370dc34792a82b932720b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnitude: 0.5
+  Magnitude: 0.2
 --- !u!114 &114693674938443244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf22212370dc34792a82b932720b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnitude: 0.5
+  Magnitude: 0.2
 --- !u!114 &114844893849100670
 MonoBehaviour:
   m_ObjectHideFlags: 1

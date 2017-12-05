@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\General scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\General scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\General scripts\ShieldIndicator.cs" />
+    <Compile Include="Assets\Scripts\General scripts\Starfield.cs" />
     <Compile Include="Assets\Scripts\Main scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Main scripts\GhostBoomFade.cs" />
     <Compile Include="Assets\Scripts\Main scripts\GhostBoomReset.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Assets\Scripts\Pickups\PickupHandlerDamage.cs" />
     <Compile Include="Assets\Scripts\Pickups\PickupHandlerFirerate.cs" />
     <Compile Include="Assets\Scripts\Pickups\PickupHandlerHealth.cs" />
+    <Compile Include="Assets\Scripts\Pickups\PickupHandlerLife.cs" />
     <Compile Include="Assets\Scripts\Pickups\PickupHandlerSpeed.cs" />
     <Compile Include="Assets\Scripts\Player scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Player scripts\PMissile.cs" />

@@ -13,13 +13,15 @@ public class Laser : MonoBehaviour {
 	public float PulseRate = 0.3f;
 	private float PulseCounter;
 
+	private int Pulses = 1;
+
 	public GameObject projectile;
 
 	public int Damage;
 
 	public void Start()
 	{
-		PulseCounter = PulseRate;
+		PulseCounter = 0;
 		Flag = Instantiate(Flag, transform.position, transform.rotation,transform);
 		Beam = Instantiate(Beam, transform);
 		Beam.transform.localPosition = new Vector3(Beam.transform.localScale.y / 2, 0, 1);
@@ -46,8 +48,9 @@ public class Laser : MonoBehaviour {
 				{
 					PulseCounter = PulseRate;
 					GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(0,0,-90), transform);
-					bullet.GetComponent<Bullet>().Damage = Damage;
-					bullet.transform.tag = transform.tag;
+					bullet.GetComponent<Bullet>().Damage = Damage/Pulses;
+					Pulses++;
+                    bullet.transform.tag = transform.tag;
 					bullet.GetComponent<Bullet>().speed = 80;
 				}
             }

@@ -4,10 +4,17 @@ using UnityEngine;
 using System.Linq;
 using TP = ShipTemplate; //because at this point I'm just trying everything
 
+public class StoreItem
+{
+	public Sprite[] spriteLis;
+	public int remain;
+	public int index;
+}
+
 public class SwitchSystem : MonoBehaviour
 {
 
-    private List<ShipTemplate> Roster = new List<ShipTemplate>();
+    public List<ShipTemplate> Roster = new List<ShipTemplate>();
 	//Classes inheriting from the parent can be stored here, so we can have different firing methods stored in this list
 
     public GameObject Base;
@@ -24,19 +31,18 @@ public class SwitchSystem : MonoBehaviour
     void Start()
     {
         Roster.Add(new Arrow(transform));
+		Roster.Add(new Escort(transform));
 
-		Camera.main.transform.BroadcastMessage("SetLives", new int[2] { remainingPla, index });
+		Camera.main.transform.BroadcastMessage("SetLives", Pack());
         StartPos = transform.position;
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
     }
 
     void Update()
     {
-		print(Roster[index]);
 		if (Input.GetButtonDown("Ability") && AbilityCharge == 100)
 		{
 			AbilityActive = true;
-			Roster[index].AbilityActive = true;
         }
 		if (AbilityActive && AbilityCharge > 0)
 		{
@@ -47,8 +53,8 @@ public class SwitchSystem : MonoBehaviour
 		if (AbilityCharge == 0)
 		{
 			AbilityActive = false;
-			Roster[index].AbilityActive = false;
-		}
+			Roster[index].AbilityEnd();
+        }
 		if (!AbilityActive && AbilityCharge != 100)
 		{
 			AbilityCharge = Mathf.Min(100, AbilityCharge + Time.deltaTime);
@@ -62,16 +68,20 @@ public class SwitchSystem : MonoBehaviour
 
 		if (Input.GetButtonDown("SwitchL") && index > 0)
         {
-            index--;
+			Roster[index].AbilityEnd();
+
+			index--;
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
-			Camera.main.transform.BroadcastMessage("SetLives", new int[2] { remainingPla, index });
-		}
+			Camera.main.transform.BroadcastMessage("SetLives", Pack());
+        }
         else if (Input.GetButtonDown("SwitchR") && index < remainingPla-1)
         {
-            index++;
+			Roster[index].AbilityEnd();
+
+			index++;
             transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
-			Camera.main.transform.BroadcastMessage("SetLives", new int[2] { remainingPla, index });
-		}
+			Camera.main.transform.BroadcastMessage("SetLives", Pack());
+        }
     }
 
     void EvaluateChildren()
@@ -82,7 +92,7 @@ public class SwitchSystem : MonoBehaviour
 		{
 			print("Dying lmao");
 			Camera.main.transform.BroadcastMessage("SetHealth", index);
-			Camera.main.transform.BroadcastMessage("SetLives", new int[2] { index, -1 });
+			Camera.main.transform.BroadcastMessage("SetLives", Pack());
 			//death stuff
 			Destroy(gameObject);
 			return; //Script would otherwise run and spawn a new player before instantly deleting it, as destroy is run only at the start of the next frame.
@@ -103,7 +113,7 @@ public class SwitchSystem : MonoBehaviour
 			{
 				index--;
 			}
-            Camera.main.transform.BroadcastMessage("SetLives", new int[2] { remainingPla, index });
+            Camera.main.transform.BroadcastMessage("SetLives", Pack() );
         }
         GameObject NewPlayer = Instantiate(Base, transform.position, Quaternion.Euler(0, 0, 0), transform);
         NewPlayer.GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
@@ -113,5 +123,26 @@ public class SwitchSystem : MonoBehaviour
 		{
 			i.Ship = NewPlayer.transform;
 		}
+	}
+
+	public StoreItem Pack()
+	{
+		StoreItem Comp = new StoreItem();
+		Sprite[] SpLis = new Sprite[6];
+		for (int i = 0; i < 6; i++)
+		{
+			try
+			{
+				SpLis[i] = Roster[i].sprite;
+			}
+			catch
+			{
+				SpLis[i] = null;
+			}
+		}
+		Comp.spriteLis = SpLis;
+		Comp.remain = remainingPla;
+		Comp.index = index;
+		return Comp;
 	}
 }

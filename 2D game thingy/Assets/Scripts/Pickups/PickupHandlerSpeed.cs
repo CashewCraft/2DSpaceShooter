@@ -7,6 +7,7 @@ public class PickupHandlerSpeed : MonoBehaviour {
 	public float speed = 10;
 	private bool Active = false;
 	public float lifeSpan = 20;
+	public int index;
 
 	void Update () {
 		if (!Active)
