@@ -17,7 +17,7 @@ public class Bomb : MonoBehaviour {
         {
 			Player.GetChild(0).GetComponent<Damage>().TakeDamage(20);
 			BroadcastMessage("EvaluateChildren");
-            Destroy(transform.GetChild(0));
+            Destroy(transform.GetChild(0).gameObject);
 		}
 	}
 

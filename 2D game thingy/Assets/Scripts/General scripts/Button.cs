@@ -14,7 +14,6 @@ public class Button : MonoBehaviour {
 		{
 			Destroy(i);
 		}
-		SceneManager.LoadScene("Base", LoadSceneMode.Additive);
-		SceneManager.UnloadScene("Menu");
+		SceneManager.LoadScene ("Base", LoadSceneMode.Additive);
 	}
 }
