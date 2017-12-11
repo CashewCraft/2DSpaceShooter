@@ -3,9 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChargeUI : MonoBehaviour {
-	void SetCharge(int val)
+
+	private float AbilityCharge = 0;
+	private bool AbilityActive = false;
+
+	public void SetCharge(float val)
 	{
-		transform.GetChild(0).localScale = new Vector3(1, (float)val / 100, 1);
-		transform.GetChild(0).localPosition = new Vector3(0, -(1 - ((float)val / 100)) / 2, -1);
+        AbilityCharge = val;
+		transform.GetChild(0).localScale = new Vector3(1, AbilityCharge / 100, 1);
+		transform.GetChild(0).localPosition = new Vector3(0, -(1 - (AbilityCharge / 100)) / 2, -1);
+	}
+
+	public void AddCharge(float val)
+	{
+		AbilityCharge = Mathf.Min(AbilityCharge+val,100);
+		SetCharge(AbilityCharge);
+	}
+
+    public float GetCharge()
+	{
+		return AbilityCharge;
+	}
+
+	public void SetActive(bool val)
+	{
+		AbilityActive = val;
+	}
+
+	public bool GetActive()
+	{
+		return AbilityActive;
 	}
 }

@@ -342,6 +342,7 @@ MonoBehaviour:
   - {fileID: 1447545979630518, guid: 9aad90153db9e564fbae7b48bed65a0e, type: 2}
   - {fileID: 1874371432717686, guid: 21ea1a1a66b02dc4db801e98f469a8b0, type: 2}
   - {fileID: 1093580518118262, guid: 71179c1148a101e438ac811b8e0fb15d, type: 2}
+  points: 15
   MaxNoPickups: 1
 --- !u!114 &114224750806766364
 MonoBehaviour:

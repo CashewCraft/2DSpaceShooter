@@ -379,6 +379,7 @@ MonoBehaviour:
   - {fileID: 1874371432717686, guid: 21ea1a1a66b02dc4db801e98f469a8b0, type: 2}
   - {fileID: 1447545979630518, guid: 9aad90153db9e564fbae7b48bed65a0e, type: 2}
   - {fileID: 1447545979630518, guid: 9aad90153db9e564fbae7b48bed65a0e, type: 2}
+  points: 100
   MaxNoPickups: 7
 --- !u!212 &212047535057422358
 SpriteRenderer:

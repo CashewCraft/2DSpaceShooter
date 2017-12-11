@@ -69,7 +69,7 @@ public class TurretControl : MonoBehaviour {
 			{
 				if (PatternPos == Pattern.GetLength(0))
 				{
-                    PatternIndex = Random.Range(0, Pattern.GetLength(0));
+                    PatternIndex = Random.Range(0, Pattern.GetLength(0)-1);
 					Pattern = Patterns.ElementAt(PatternIndex).ToArray();
 					PatternPos = 0;
 					Timer = fireRate;

@@ -8,6 +8,8 @@ public class PickUpOnDeath : MonoBehaviour {
 	public GameObject[] PickupList; //array of pickup prefabs
 	private int Children;
 
+	public float points;
+
 	public int MaxNoPickups = 1;
 
 	void Start()
@@ -22,8 +24,10 @@ public class PickUpOnDeath : MonoBehaviour {
 		{
             if (Random.Range(1,100) <= PickupChance)
 			{
-                DropPickup();
+				Camera.main.transform.BroadcastMessage("AddCharge", points*2);
+				DropPickup();
 			}
+			Camera.main.transform.BroadcastMessage("AddCharge", points);
 		}
 	}
 

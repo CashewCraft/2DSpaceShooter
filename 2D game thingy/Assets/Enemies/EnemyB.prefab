@@ -370,6 +370,7 @@ MonoBehaviour:
   - {fileID: 1874371432717686, guid: 21ea1a1a66b02dc4db801e98f469a8b0, type: 2}
   - {fileID: 1996279023866814, guid: 9fe3f5ac4fbd23942acf962bc66e368a, type: 2}
   - {fileID: 1530834298176200, guid: 7e34436f0c464a642a2064fa3285e830, type: 2}
+  points: 10
   MaxNoPickups: 1
 --- !u!114 &114789367222193330
 MonoBehaviour:

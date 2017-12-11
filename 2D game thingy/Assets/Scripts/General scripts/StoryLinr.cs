@@ -35,6 +35,9 @@ public class StoryLinr : MonoBehaviour {
                 I.SpawnC = true;
                 I.SpawnA = false;
                 break;
+			case 4:
+				//End scene
+				break;
         }
 	}
 }

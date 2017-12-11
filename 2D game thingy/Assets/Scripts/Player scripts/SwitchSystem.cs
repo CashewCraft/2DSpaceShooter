@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 using TP = ShipTemplate; //because at this point I'm just trying everything
 
 public class StoreItem
@@ -22,11 +23,10 @@ public class SwitchSystem : MonoBehaviour
     public int remainingPla = 3;
     private Vector3 StartPos;
 
-	public float AbilityCharge = 0;
-	private bool AbilityActive = false;
-
 	public GameObject bullet;
 	public GameObject missile;
+
+	public ChargeUI Charge;
 
     void Start()
     {
@@ -36,30 +36,30 @@ public class SwitchSystem : MonoBehaviour
 		Camera.main.transform.BroadcastMessage("SetLives", Pack());
         StartPos = transform.position;
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
+		Charge.SetCharge(100);
     }
 
     void Update()
     {
-		if (Input.GetButtonDown("Ability") && AbilityCharge == 100)
+		if (Input.GetButtonDown("Ability") && Charge.GetCharge() == 100)
 		{
-			AbilityActive = true;
+			Charge.SetActive(true);
         }
-		if (AbilityActive && AbilityCharge > 0)
+		else if (Input.GetButtonDown("Ability")) { print(Charge.GetCharge()); }
+		if (Charge.GetActive() && Charge.GetCharge() > 0)
 		{
-			AbilityCharge = Mathf.Max(AbilityCharge - Time.deltaTime*Roster[index].DecayFactor, 0);
-			Camera.main.transform.BroadcastMessage("SetCharge", AbilityCharge);
+			Charge.SetCharge(Mathf.Max(Charge.GetCharge()- Time.deltaTime*Roster[index].DecayFactor, 0));
 			Roster[index].Ability();
 		}
-		if (AbilityCharge == 0)
+		if (Charge.GetCharge() == 0)
 		{
-			AbilityActive = false;
+			Charge.SetActive(false);
 			Roster[index].AbilityEnd();
         }
-		if (!AbilityActive && AbilityCharge != 100)
-		{
-			AbilityCharge = Mathf.Min(100, AbilityCharge + Time.deltaTime);
-			Camera.main.transform.BroadcastMessage("SetCharge", AbilityCharge);
-		}
+		//if (!Charge.GetActive() && Charge.GetCharge() != 100)
+		//{
+		//	Charge.SetCharge(Mathf.Min(100, Charge.GetCharge() + Time.deltaTime));
+		//}
 
 		if (Input.GetButton("Fire1"))
 		{
@@ -93,9 +93,7 @@ public class SwitchSystem : MonoBehaviour
 			print("Dying lmao");
 			Camera.main.transform.BroadcastMessage("SetHealth", index);
 			Camera.main.transform.BroadcastMessage("SetLives", Pack());
-			//death stuff
-			Destroy(gameObject);
-			return; //Script would otherwise run and spawn a new player before instantly deleting it, as destroy is run only at the start of the next frame.
+			SceneManager.LoadScene("Menu");
 		}
 		else
 		{

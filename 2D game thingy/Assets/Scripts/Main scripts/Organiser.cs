@@ -8,6 +8,11 @@ public class Organiser : MonoBehaviour {
 		//Organiser script to deal with scaling everything to different aspect ratios & resolutions
 		//Much better than just having black bars
 
+		while (Camera.allCamerasCount > 1)
+		{
+			Destroy(Camera.main); //Delete the main camera left over from the last scene
+		}
+
 		Vector3 BL = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 10)); //Get the bottom left corner at Z=0
 		BL.x = (BL.x * 0.8f);
 		Vector3 TR = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 10)); //Get the top right corner at Z=0
