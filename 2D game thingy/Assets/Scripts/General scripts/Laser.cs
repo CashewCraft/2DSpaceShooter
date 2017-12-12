@@ -46,7 +46,6 @@ public class Laser : MonoBehaviour {
 				PulseCounter -= Time.deltaTime;
 				if (PulseCounter <= 0 && Beam.GetComponent<SpriteRenderer>().color.a > (150.0f/255))
 				{
-					print("beep beep");
 					PulseCounter = PulseRate;
 					GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(0,0,-90), transform);
 					bullet.GetComponent<Bullet>().Damage = Damage/Pulses;

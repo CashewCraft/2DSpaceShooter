@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DebugPoints.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\Bomb.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\Bumble.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\EnemyFire.cs" />
@@ -60,6 +61,7 @@
      <Compile Include="Assets\Scripts\Enemy scripts\TypeB.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\TypeC.cs" />
      <Compile Include="Assets\Scripts\Enemy scripts\TypeD.cs" />
+     <Compile Include="Assets\Scripts\Enemy scripts\TypeE.cs" />
      <Compile Include="Assets\Scripts\General scripts\Button.cs" />
      <Compile Include="Assets\Scripts\General scripts\Damage.cs" />
      <Compile Include="Assets\Scripts\General scripts\Laser.cs" />
@@ -89,6 +91,7 @@
      <Compile Include="Assets\Scripts\UI\ChargeUI.cs" />
      <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
      <Compile Include="Assets\Scripts\UI\LivesUI.cs" />
+     <Compile Include="Assets\Scripts\UI\ScoreUI.cs" />
      <Compile Include="Assets\Scripts\UI\UIorganiser.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
