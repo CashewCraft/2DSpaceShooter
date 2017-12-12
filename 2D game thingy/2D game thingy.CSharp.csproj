@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DebugPoints.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\Bomb.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\Bumble.cs" />
     <Compile Include="Assets\Scripts\Enemy scripts\EnemyFire.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Assets\Scripts\UI\ChargeUI.cs" />
     <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\LivesUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ScoreUI.cs" />
     <Compile Include="Assets\Scripts\UI\UIorganiser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

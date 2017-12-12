@@ -6,9 +6,12 @@ public class Damage : MonoBehaviour {
 
 	public int health = 100;
     public bool IsPlayer = false;
+	
+	public int blip = 0;
 
 	void Start()
 	{
+
 		if (IsPlayer)
 		{
 			Camera.main.transform.BroadcastMessage("SetHealth", 100);
@@ -28,7 +31,24 @@ public class Damage : MonoBehaviour {
 	{
 		if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup" && health > 0)
 		{
-            try
+			if (blip == 0)
+			{
+				print("blipping");
+				try
+				{
+					transform.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 255);
+				}
+				catch
+				{
+					foreach (SpriteRenderer i in transform.GetComponentsInChildren<SpriteRenderer>())
+					{
+						i.color = new Color(0, 0, 0, 255);
+					}
+				}
+				blip = 2;
+			}
+
+			try
             {
                 health -= hit.transform.GetComponent<Bullet>().Damage;
                 Destroy(hit.gameObject);
@@ -53,6 +73,29 @@ public class Damage : MonoBehaviour {
 		else if (hit.transform.tag == "Pickup" && transform.tag == "Player")
 		{
 			hit.transform.BroadcastMessage("Tag",transform);
+		}
+	}
+
+	void Update()
+	{
+		if (blip > 0)
+		{
+			blip--;
+			if (blip == 0)
+			{
+				try
+				{
+					transform.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+				}
+				catch
+				{
+					foreach (SpriteRenderer i in transform.GetComponentsInChildren<SpriteRenderer>())
+					{
+						i.color = new Color(255, 255, 255, 255);
+					}
+
+				}
+			}
 		}
 	}
 }

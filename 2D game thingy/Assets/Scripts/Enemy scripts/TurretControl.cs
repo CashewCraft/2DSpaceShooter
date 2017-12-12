@@ -105,8 +105,8 @@ public class TurretControl : MonoBehaviour {
 	{
 		if (Tick)
 		{
-			GameObject bullet1 = Instantiate(projectile, Turret1.GetChild(0).position, Quaternion.Euler(0, 0, Turret1.rotation.eulerAngles.z + 180), transform.parent.parent.Find("BulletHolder"));
-			GameObject bullet2 = Instantiate(projectile, Turret2.GetChild(0).position, Quaternion.Euler(0, 0, Turret2.rotation.eulerAngles.z + 180), transform.parent.parent.Find("BulletHolder"));
+			GameObject bullet1 = Instantiate(projectile, Turret1.position, Quaternion.Euler(0, 0, Turret1.rotation.eulerAngles.z + 180), transform.parent.parent.Find("BulletHolder"));
+			GameObject bullet2 = Instantiate(projectile, Turret2.position, Quaternion.Euler(0, 0, Turret2.rotation.eulerAngles.z + 180), transform.parent.parent.Find("BulletHolder"));
 			bullet1.GetComponent<Bullet>().Damage = damage;
 			bullet1.transform.tag = transform.tag;
 			bullet1.GetComponent<Bullet>().speed = 20;
