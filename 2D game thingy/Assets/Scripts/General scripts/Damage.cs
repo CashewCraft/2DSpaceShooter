@@ -29,52 +29,53 @@ public class Damage : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D hit)
 	{
-		if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup" && health > 0)
-		{
-			if (blip == 0)
-			{
-				print("blipping");
-				try
-				{
-					transform.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 255);
-				}
-				catch
-				{
-					foreach (SpriteRenderer i in transform.GetComponentsInChildren<SpriteRenderer>())
-					{
-						i.color = new Color(0, 0, 0, 255);
-					}
-				}
-				blip = 2;
-			}
+        if (hit.transform.tag != transform.tag && hit.transform.tag != "Pickup" && health > 0)
+        {
+            if (blip == 0)
+            {
+                try
+                {
+                    transform.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 255);
+                }
+                catch
+                {
+                    foreach (SpriteRenderer i in transform.GetComponentsInChildren<SpriteRenderer>())
+                    {
+                        i.color = new Color(0, 0, 0, 255);
+                    }
+                }
+                blip = 2;
+            }
 
-			try
+            try
             {
                 health -= hit.transform.GetComponent<Bullet>().Damage;
                 Destroy(hit.gameObject);
             }
             catch
             {
-                health -= 20;
-			}
-            finally
-            {
-                if (IsPlayer)
+                if (hit.tag != transform.tag)
                 {
-                    Camera.main.transform.BroadcastMessage("SetHealth", health);
+                    health -= 20;
                 }
-                if (health <= 0)
-                {
-					Destroy(gameObject);
-					transform.parent.BroadcastMessage("EvaluateChildren"); //check if all other elements are dead
-				}
+            }
+            if (IsPlayer)
+            {
+                Camera.main.transform.BroadcastMessage("SetHealth", health);
             }
         }
 		else if (hit.transform.tag == "Pickup" && transform.tag == "Player")
 		{
 			hit.transform.BroadcastMessage("Tag",transform);
 		}
-	}
+
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            transform.parent.BroadcastMessage("EvaluateChildren"); //check if all other elements are dead
+        }
+    }
 
 	void Update()
 	{

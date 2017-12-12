@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4450746040921730}
   - component: {fileID: 61890269853694182}
   - component: {fileID: 114144383071696814}
+  - component: {fileID: 114242105145537562}
   m_Layer: 0
   m_Name: PSheildContainer
   m_TagString: Player
@@ -109,6 +110,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 255
   IsPlayer: 0
+  blip: 0
+--- !u!114 &114242105145537562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1547161830530608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4c049bee7705d4a87a8906270cc93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212456074490927536
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,6 +131,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -133,6 +147,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

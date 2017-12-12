@@ -14,7 +14,6 @@ public class StoreItem
 
 public class SwitchSystem : MonoBehaviour
 {
-
     public List<ShipTemplate> Roster = new List<ShipTemplate>();
 	//Classes inheriting from the parent can be stored here, so we can have different firing methods stored in this list
 
@@ -116,7 +115,7 @@ public class SwitchSystem : MonoBehaviour
         GameObject NewPlayer = Instantiate(Base, transform.position, Quaternion.Euler(0, 0, 0), transform);
         NewPlayer.GetComponent<SpriteRenderer>().sprite = Roster[index].sprite;
 		NewPlayer.transform.name = "Player";
-		print("New Player spawned");
+        print("New Player spawned");
 		foreach (ShipTemplate i in Roster)
 		{
 			i.Ship = NewPlayer.transform;

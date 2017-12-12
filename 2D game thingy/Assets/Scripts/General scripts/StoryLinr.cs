@@ -30,8 +30,10 @@ public class StoryLinr : MonoBehaviour {
                 I.SpawnA = true;
                 I.SpawnD = true;
                 I.SpawnB = true;
+                I.SpawnE = true;
                 break;
             case 3:
+                I.SpawnE = false;
                 I.SpawnC = true;
                 I.SpawnA = false;
                 break;
