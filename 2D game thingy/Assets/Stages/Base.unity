@@ -417,10 +417,10 @@ MonoBehaviour:
   SpawnA: 0
   ADelayMin: 3
   ADelayMax: 3.5
-  SpawnB: 0
+  SpawnB: 1
   BDelayMin: 6
   BDelayMax: 7
-  SpawnC: 0
+  SpawnC: 1
   CDelayMin: 3e+17
   CDelayMax: 3e+17
   SpawnD: 0
@@ -1593,7 +1593,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1182411719
+  randomSeed: 327900349
   InitialModule:
     serializedVersion: 3
     enabled: 1

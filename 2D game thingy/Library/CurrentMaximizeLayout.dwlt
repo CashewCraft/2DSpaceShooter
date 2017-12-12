@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 31547
+  controlID: 3663
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,9 +154,9 @@ MonoBehaviour:
     height: 897
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0c510000765000008e50000088500000a450000064500000
-    m_LastClickedID: 20580
-    m_ExpandedIDs: 5a07f1ff5e07f1ff6607f1ff7e07f1ff8007f1ff8cadf4ff4e74f8ffa0b2f9ffa8b2f9ff4024faff0465faff4acefaff52cefaff000ffbff080ffbffe629fbffe22afbff8e92fbffec99fdff50a0fdfff6adfdffaa25ffff18fcffff0000000072270000782700008a2700009a270000c427000012280000242800002a280000364200002843000070430000764300008843000098430000cc4300001a4400002c44000032440000425000004e500000545000005a5000006a500000825000009e500000cc500000d4500000da500000e4500000ec500000f2500000f8500000125100001a510000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 7aeafeff8ceafeff8eeafeff3a62ffff4a62ffff5262ffff06fcffff00000000a0270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_MinSize: {x: 408, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 31548
+  controlID: 3664
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 408, y: 221}
   m_MaxSize: {x: 8008, y: 4021}
   vertical: 0
-  controlID: 31418
+  controlID: 3543
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 24.491634, y: 3.720986, z: 1}
+    m_Target: {x: -1.405991, y: 10.583473, z: 1}
     speed: 2
-    m_Value: {x: 24.491634, y: 3.720986, z: 1}
+    m_Value: {x: -1.405991, y: 10.583473, z: 1}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -313,9 +313,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.8407164
+    m_Target: 15.719793
     speed: 2
-    m_Value: 7.8407164
+    m_Value: 15.719793
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -369,8 +369,8 @@ MonoBehaviour:
     y: 512
     width: 833
     height: 406
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -415,20 +415,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/Images
+    - Assets/Enemies
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Images
+  - Assets/Enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Joshua\Unity\2D game thingy 2\2DSpaceShooter\2D game
     thingy
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6260000
-    m_LastClickedID: 9974
-    m_ExpandedIDs: 0000000076260000a4260000f826000000ca9a3bffffff7f
+    m_SelectedIDs: a2260000
+    m_LastClickedID: 9890
+    m_ExpandedIDs: 0000000072260000ac2600000827000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -456,7 +456,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000076260000a4260000f826000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000072260000ac2600000827000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -481,10 +481,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0c510000765000008e50000088500000a450000064500000
-    m_LastClickedInstanceID: 20748
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 5a240000a8270000064affff1426000032290000422900002c26000050260000bceef0ff3865f3ff04270000fe2ffeff18290000662900007026000078260000b0280000c62600005a2700000a29ffff182a0000da280000c0260000e811fbffaa260000b626000000000000d418ffff06270000d0260000c4260000a8890000122700000e270000fe260000
+    m_ExpandedInstanceIDs: 5a240000a8270000064affff1426000032290000422900002c26000050260000bceef0ff3865f3ff04270000fe2ffeff18290000662900007026000078260000b0280000c62600005a2700000a29ffff182a0000da280000c0260000e811fbffaa260000b626000000000000d418ffff06270000d0260000c4260000a8890000122700000e270000fe2600008e260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
